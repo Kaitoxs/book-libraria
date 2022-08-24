@@ -8,3 +8,16 @@ Este projeto tem por objetivo criar uma API Rest para efetuar cadastros de livro
 - Git
 - Django
 - Conta no GitHub
+
+
+## Atualizar os modelos de banco de dados
+
+```
+$ python manage.py migrate
+```
+
+## Executar o projeto
+
+```
+$ python manage.py runserver
+```
