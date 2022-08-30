@@ -41,14 +41,3 @@ class BooksViewSet(viewsets.ModelViewSet):
 
         serializer = self.get_serializer(book,  many=True)
         return Response(serializer.data)
-
-
-    @action(detail=False)
-    def books_by_author(self,request):
-        author = request.query_params['author']
-        book_list = models.Books.objects.filter(author = author)
-
-        serializer = self.get_serializer(book_list,  many=True)
-        return Response(serializer.data)
-
-    
